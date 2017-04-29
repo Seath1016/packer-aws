@@ -1,7 +1,4 @@
 #!groovy
-
-abortOlderBuilds()
-
 pipeline {
     agent {
       dockerfile true
