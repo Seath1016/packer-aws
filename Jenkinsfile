@@ -4,7 +4,7 @@ abortOlderBuilds()
 
 pipeline {
     agent {
-      docker.build(packer-ansible)
+      dockerfile true
     }
 
     stages {
