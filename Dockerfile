@@ -5,6 +5,6 @@ RUN apk update && apk add --no-cache alpine-sdk \
   libffi-dev \
   python \
   python-dev \
-  py-pip \
+  py-pip
 
 RUN pip install ansible
