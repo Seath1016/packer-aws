@@ -1,11 +1,16 @@
+#!groovy
+
+abortOlderBuilds()
+
 pipeline {
-    agent any
+    agent {
+      docker.build(packer-ansible)
+    }
 
     stages {
         stage('Build') {
             steps {
                 echo 'Building..'
-                docker.build(packer-ansible)
             }
         }
         stage('Test') {
